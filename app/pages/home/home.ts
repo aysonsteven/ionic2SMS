@@ -8,6 +8,7 @@ import { SMS } from 'ionic-native';
 })
 export class HomePage {
 
+  recepientNumber:string;
   msgBody:string;
 
   constructor(public navCtrl: NavController) {
@@ -15,14 +16,14 @@ export class HomePage {
   }
  
   sndSMS(){
-    var options={
+    let options={
           replaceLineBreaks: false,
           android: {
                intent: ''  // intent: 'INTENT'-- will open default sms app while '' will send without default sms app
             
             }
     }
-    SMS.send('09214531866', this.msgBody ,options)
+    SMS.send(this.recepientNumber, this.msgBody ,options)
       .then(()=>{
         alert("success");
       },()=>{
