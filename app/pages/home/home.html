@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic 2 Cordova SMS
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <ion-card>
+    <ion-card-header>
+      SMS
+    </ion-card-header>
+    <ion-card-content>
+      Body
+      <ion-list>
+        <ion-item>
+          <ion-textarea [(ngModel)]="msgBody">
+          </ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+ 
+<button full (click)="sndSMS()">Send SMS</button>
+
+
+ 
+</ion-content>
