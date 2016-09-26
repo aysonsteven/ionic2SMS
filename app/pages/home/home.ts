@@ -19,7 +19,7 @@ export class HomePage {
     let options={
           replaceLineBreaks: false,
           android: {
-               intent: ''  // intent: 'INTENT'-- will open default sms app while '' will send without default sms app
+               intent: ''
             
             }
     }
